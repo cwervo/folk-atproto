@@ -1,5 +1,8 @@
 package require http
+package require tls
 package require json
+
+::http::register https 443 ::tls::socket
 
 proc geturl {url {_meta {}}} {
     if {$_meta ne ""} {
@@ -23,7 +26,7 @@ proc geturl {url {_meta {}}} {
     }
 }
 
-set bmannResponse [geturl http://localhost:3000/xrpc/app.bsky.feed.getAuthorFeed?actor=bmann.ca]
+set bmannResponse [geturl https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=bmann.ca]
 set parsed_data [json::json2dict $bmannResponse]
 
 set feed [dict get $parsed_data feed]
