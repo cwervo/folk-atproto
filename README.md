@@ -6,6 +6,12 @@ This script provides a Tcl-native way to fetch and process ATProtocol data, spec
 
 For those familiar with Tcl and the ATProto space, this tool offers a lightweight method to interact with BlueSky/ATProto services directly using Tcl, without relying on external JavaScript/npm-based proxies or complex dependencies. It's a simple, scriptable solution for fetching feed data.
 
+## Current Status & Disclaimer
+
+- The `atproto.tcl` script and broader ATProto library functionality are currently in development.
+- At present, this repository primarily provides the functionality to fetch user feeds.
+- **This is an experimental repository. Use at your own risk.**
+
 ## Dependencies
 
 *   **Tcl/Tk**: Version 8.6 or higher recommended.
@@ -23,13 +29,13 @@ For those familiar with Tcl and the ATProto space, this tool offers a lightweigh
 
 2.  **Run the Script**:
     ```bash
-    tclsh getProfile.tcl
+    tclsh atproto.tcl
     ```
-    By default, the script fetches the feed for the user `bmann.ca`. You can modify the `getProfile.tcl` script to change the target user or customize data processing.
+    By default, the script fetches the feed for the user `bmann.ca`. You can modify the `atproto.tcl` script to change the target user or customize data processing.
 
 ## How it Works
 
-The `getProfile.tcl` script performs the following:
+The `atproto.tcl` script performs the following:
 1.  Requires necessary Tcl packages (`http`, `tls`, `json`).
 2.  Registers the `tls` package to handle HTTPS for the `http` package.
 3.  Defines a `geturl` procedure to fetch data from a given URL, returning the response body.
