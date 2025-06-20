@@ -4,13 +4,13 @@ This script provides a Tcl-native way to fetch and process ATProtocol data, spec
 
 ## Benefits
 
-For those familiar with Tcl and the ATProto space, this tool offers a lightweight method to interact with BlueSky/ATProto services directly using Tcl, without relying on external JavaScript/npm-based proxies or complex dependencies. It's a simple, scriptable solution for fetching feed data.
+For those familiar with Tcl and ATProto, this tool offers a lightweight method to interact with BlueSky/ATProto services directly using Tcl, without relying on external JavaScript/npm-based proxies or complex dependencies. It's a simple, scriptable solution for fetching feed data.
 
-## Current Status & Disclaimer
+## Current Status & A Disclaimer
 
-- The `atproto.tcl` script and broader ATProto library functionality are currently in development.
-- At present, this repository primarily provides the functionality to fetch user feeds.
-- **This is an experimental repository. Use at your own risk.**
+- The `atproto.tcl` script and broader ATProto library functionality are currently in (pre-alpha tbh) development.
+- Currently I'm only providing fetching user feeds.
+- **⚠️ This is an experimental repository. Use at your own risk.**
 
 ## Dependencies
 
@@ -25,15 +25,14 @@ For those familiar with Tcl and the ATProto space, this tool offers a lightweigh
 Make sure Tcl is installed, along with the `json` (Tcllib) and `tls` packages. You can typically install these using your system's package manager. For example:
 *   On Debian/Ubuntu: `sudo apt-get install tcl tcllib tcl-tls`
 *   On Fedora: `sudo dnf install tcl tcllib tcl-tls`
-*   On macOS (using MacPorts): `sudo port install tcl tcllib tcltls`
-*   On macOS (using Homebrew): `brew install tcl-tk tls` (Tcllib is usually included with tcl-tk from Homebrew)
+*   On MacOS (using Homebrew): `brew install tcl-tk tls` (Tcllib is usually included with tcl-tk from Homebrew)
 
 ### 2. Running the Script Directly (Example Usage)
 To see the script in action fetching a predefined user's feed:
 ```bash
 tclsh atproto.tcl
 ```
-This will execute the example feed fetching logic defined at the end of the `atproto.tcl` script, typically for the user `bmann.ca`.
+This will execute the example feed fetching logic defined at the end of the `atproto.tcl` script for the user `bmann.ca`.
 
 ### 3. Using as a Library
 To use the procedures in your own Tcl scripts, source the `atproto.tcl` file:
